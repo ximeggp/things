@@ -29,7 +29,7 @@ const updateTareas = asyncHandler (async (req, res) => {
         res.status(401)
         throw new Error('Usuario no autorizado para actualizar la tarea.')
    } else {
-     const tareaUpdated = await Tarea.findByIdAndUpdate(req.params.id, req.body, {new:true})
+        const tareaUpdated = await Tarea.findByIdAndUpdate(req.params.id, req.body, {new:true})
         res.status(200).json(tareaUpdated)
    }
 })
